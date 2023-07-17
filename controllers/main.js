@@ -5,15 +5,13 @@ import { RenderUI, handleTryOn } from '../controllers/functions.js';
 
 // ================== INIT =========================
 
-const app = async () => {
+(async () => {
     const data = await getData();
     const { navPills, tabPanes } = data[0];
 
     RenderUI(navPills, tabPanes);
     event(tabPanes);
-};
-
-app();
+})();
 
 // ==================== EVENT ========================
 

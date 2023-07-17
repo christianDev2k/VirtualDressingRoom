@@ -31,10 +31,10 @@ export function RenderUI(navPills, tabPanes) {
 
     // Render navigation
     const nav = navPills.map((item, index) => {
-        const { tabName, type } = item;
+        const { tabName, type, showName } = item;
         return `
             <li class="nav-item" role="presentation">
-                <button class="nav-link ${!index ? 'active' : null}" id="${tabName}" data-toggle="tab" data-target="#${type}" type="button" role="tab" aria-controls="home" aria-selected="true"></button>
+                <button class="nav-link ${!index ? 'active' : null}" id="${tabName}" data-toggle="tab" data-target="#${type}" type="button" role="tab" aria-controls="home" aria-selected="true">${showName}</button>
             </li>
         `;
     });
